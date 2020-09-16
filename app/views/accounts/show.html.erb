@@ -1,0 +1,14 @@
+<h1><%= @account.atype %> Account</h1>
+<ul>
+  <li>Amount: <%= @account.amount %></li> 
+  <li>Interest: <%= @account.interest %></li> 
+  </ul>
+
+
+<%= simple_form_for(@account) do |f| %>
+  <%= f.label :Deposit %>
+  <%= f.number_field :float %>
+  <%= f.submit %>
+<% end %>
+
+

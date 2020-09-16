@@ -1,0 +1,11 @@
+<%= simple_form_for(@account) do |f| %>
+  <%= f.label :amount %>
+  <%= f.number_field :amount %>
+  <%= f.label :type %>
+  <%= f.input :atype %> 
+  <%= f.label :interest %>
+  <%= f.number_field :interest %>
+  <%= f.submit %>
+<% end %>
+
+
