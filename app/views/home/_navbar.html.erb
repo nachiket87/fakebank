@@ -16,8 +16,7 @@
       <% if user_signed_in?%> 
         <%= link_to 'Log out', destroy_user_session_path %>
       <% else %>
-        <div class='bg-purple-100 h-32 flex items-center p-3 mx-3'>
-          <%= link_to 'Login', new_user_session_path, class: 'no-underline hover:underline text-white text-lg'%>
+          <%= link_to 'Login', new_user_session_path, class: 'no-underline hover:no-underline text-white text-lg px-5 font-bold bg-purple-100 h-32 flex items-center mx-5 hover:bg-purple-200'%>
         </div>
         <%= link_to 'Sign Up', new_user_registration_path %>
       <% end %>
