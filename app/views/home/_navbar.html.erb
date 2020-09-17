@@ -1,22 +1,24 @@
-<nav class="flex items-center justify-between flex-wrap bg-green-100 p-6">
+<nav class="flex items-center justify-between flex-wrap border-b-2 h-32 px-6">
   <div class="flex items-center flex-shrink-0 text-gray-100 mr-6">
-    <%= link_to 'BANK OF N A TEX', root_path, class: 'font-bold text-xl tracking-tight' %>
+    <%= link_to 'BANK OF BIGGIE', root_path, class: 'font-bold text-xl tracking-tight text-black' %>
   </div>
-  <div class="block lg:hidden">
+  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto justify-center hidden lg:block">
+      <div class="text-sm">
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-blue mr-4">Ways to Bank</a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-blue mr-4">
+          Examples
+        </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-blue">
+          Blog
+        </a>
+      </div>
   </div>
-  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-    <div class="text-sm lg:flex-grow">
-    </div>
-    <div>
       <% if user_signed_in?%> 
-        <%= link_to 'Log out', destroy_user_session_path, 
-          class: "inline-block text-sm px-4 py-2 leading-none border rounded text-gray-100 border-gray-100 hover:border-transparent hover:text-teal-500 hover:bg-gray-100 mt-4 lg:mt-0" %>
+        <%= link_to 'Log out', destroy_user_session_path %>
       <% else %>
-        <%= link_to 'Login', new_user_session_path, 
-          class: "inline-block text-lg px-4 py-2 leading-none border rounded bg-white text-green-100 border-gray-100 hover:border-transparent hover:text-teal-500 hover:bg-gray-100 mt-4 lg:mt-0" %>
-        <%= link_to 'Sign Up', new_user_registration_path, 
-          class: "inline-block text-lg px-4 py-2 leading-none border rounded bg-white text-green-100 border-gray-100 hover:border-transparent hover:text-teal-500 hover:bg-gray-100 mt-4 lg:mt-0" %>
+        <div class='bg-purple-100 h-32 flex items-center p-3 mx-3'>
+          <%= link_to 'Login', new_user_session_path, class: 'no-underline hover:underline text-white text-lg'%>
+        </div>
+        <%= link_to 'Sign Up', new_user_registration_path %>
       <% end %>
-    </div>
-  </div>
 </nav>
