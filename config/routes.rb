@@ -7,4 +7,5 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy' 
   end
   resources :accounts
+  get '/user' => "accounts#index", :as => :user_root
 end

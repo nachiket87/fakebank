@@ -1,11 +1,18 @@
-<%= simple_form_for(@account) do |f| %>
-  <%= f.label :amount %>
-  <%= f.number_field :amount %>
-  <%= f.label :type %>
-  <%= f.input :atype %> 
-  <%= f.label :interest %>
-  <%= f.number_field :interest %>
-  <%= f.submit %>
-<% end %>
+<div class="bg-grey-lighter min-h-screen flex flex-col">
+  <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
+    <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
+      <%= simple_form_for(@account) do |f| %>
+        <%= f.label :amount %>
+        <%= f.number_field :amount, class:"block border border-grey-light w-full p-3 rounded mb-4" %>
+        <%= f.label :type  %>
+        <%= f.input :atype, class:"block border border-grey-light w-full p-3 rounded mb-4" %>
+        <%= f.label :interest %>
+        <%= f.number_field :interest, class:"block border border-grey-light w-full p-3 rounded mb-4" %>
+        <%= f.submit class:"btn btn-blue" %>
+
+      <% end %>
+      </div>
+    </div>
+  </div>
 
 
